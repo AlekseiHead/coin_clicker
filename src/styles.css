@@ -1,0 +1,124 @@
+html,
+body {
+  touch-action: manipulation;
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 14px;
+}
+.score {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  user-select: none;
+}
+.circle {
+  position: relative;
+}
+.circle img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 16px 0px rgba(138, 143, 254, 0.05);
+  transition: transform 0.2s ease;
+  --tiltX: 0deg;
+  --tiltY: 0deg;
+  transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
+}
+.plus-one {
+  position: absolute;
+  font-family: Inter;
+  text-shadow: 0px 0px 4px rgba(234, 182, 64, 0.25);
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(180deg, #e8c547 0%, #ef882b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+  user-select: none;
+  animation: move-up 2s forwards;
+}
+@keyframes move-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-text {
+  color: #ffcf23;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-level {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-next {
+  color: #ffcf23;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.footer-next p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.donate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donate a {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ff0000;
+  text-decoration: none;
+  transition: 0.3s linear;
+}
+.donate a:hover {
+  color: #ef882b;
+  text-decoration: underline;
+}

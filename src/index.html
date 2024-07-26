@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <title>Cat Clicker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="header">
+        <img src="./assets/coin.png" alt="Coin" />
+        <h2 class="score" id="score"></h2>
+      </div>
+      <div class="circle">
+        <img id="circle" src="./assets/cat1.png" alt="Frog" />
+      </div>
+      <div class="footer">
+        <h2 class="footer-text">
+          Your level:
+          <p class="footer-level" id="footer_level">Beginner</p>
+        </h2>
+      </div>
+			<div class="footer-next" id="footer_level"><p>Next level >&nbsp;<p id="coins">150 coins </p></p></div>
+      <div class="donate">
+        <a href="https://pay.cloudtips.ru/p/8fb0d347" target="_blank"
+          >Support Project</a
+        >
+      </div>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
